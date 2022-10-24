@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--html 태그 주석-->
+    <script>
+        
+        //주석 사용해서 왜사용했는지 적어두기
+        let sign = prompt("당신의 별자리는 무엇입니까?");
+        //prompt → 괄호안의 내용을 띄움
+        //sign → 변수, 어떤값을 넣었냐에 따라 나오는값(데이터)이 다름 
+        //let → 변수에 성질을 줄수있음, 데이터를 담는 변수(미리 매개체를 담지 않으면 인식이 안됨)
+        //var → 데이터를 담는 변수(미리 매개채를 담지않아도 인식됨)
+        //const → 한번 정해지면 변하지 않음, 상수라고 부름
+        //표현식 : 값을 만들어내는 간단한 코드 ex) 50,20+60, "javascript", "java" ....
+        //문장 : 하나 이상의 표현식 모임 ex)50;, 20+60;, 
+        if(sign.toLocaleLowerCase() === "전갈자리"){
+            alert("저도 전갈자리입니다!");
+        }
+        sign = window.prompt();
+        sign = prompt();
+        console.log(sign);
+        sign = window.prompt("오늘 너무 춥습니까?", "네");
+        //"오늘 너무 춥습니까?" → 위에 출력, "네"는 빈칸에 출력
+        document.write("<input type=input value='123'");
+        let str = "<input type=input value='123'>";
+        str += "<h1>테스트</h1>";
+    </script>
+
+</body>
+</html>
