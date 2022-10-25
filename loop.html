@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+</head>
+<body>
+    <script>
+        //for문
+        // 1) 기본 for문 - 같은 양식의 코드를 N번 반복시켜준다.
+
+        //let num = 0;
+        // num = num + 1;
+        // num = num + 1;
+        // num = num + 1;
+        // num = num + 1;
+        // num = num + 1;
+        // num = num + 1;
+        // num = num + 1;
+        // num = num + 1;
+
+
+        //for(초기변수;조건;증감문){
+        //    내용
+        //}
+
+        //1. 1부터 10까지 더하는 연산
+        // let sum = 0;
+
+        //반복문 선언
+        //초기 변수는 i로 선언하고 1로 설정한다.
+        //반복문이 한바퀴 돌때마다 i는 1씩 증가시킨다.
+        //반복문은 i <= 10 조건이 만족할때까지 실행한다.
+        // for(let i = 1; i<10; i++){
+        //     sum = sum + i;
+        //     console.log("합계" + sum);
+        //     console.log("반복되는 변수" + i);
+        // }
+
+       
+       
+        //1~100까지의 숫자의 합을 구하는 반복문
+        // 1) i = 1 부터 시작
+        // 2) i <= 100
+        // 3) i++
+        
+
+        // for(let i = 1; i <= 100; i++){
+        //     sum = sum + i; // sum +- i;
+        //     console.log(i);
+        // }
+        // console.log(sum);
+
+        //1~10까지 수 중에서 짝수만 출력
+        // 1) i = 1
+        // 2) i <= 10
+        // 3) i++
+        // 4) 숫자 % 2 == 0
+
+        
+        // for(let i = 1; i <= 10; i++){
+        //     //짝수를 구하는 조건문
+        //     if(i % 2 == 0){
+        //         //짝수 조건이 만족하는 i를 console 출력
+        //         console.log("짝수는 : " + i + "입니다.");
+        //     }
+        // }
+
+        // console.log(i); → for문에서 사용한 i는 반복문안에서만 사용되고 삭제됨
+
+        //1~100까지 수 중에서 홀수만 출력
+
+        // for(let i = 1; i <= 100; i++){
+        //         if(i % 2 == 1){
+        //             console.log("홀수는 :" + i + "입니다");
+        //         }
+        // }
+        
+        
+        // 1) i = 100
+        // 2) i >= 1
+        // 3) i--
+        // 4) 홀수를 구하는 if문
+
+        // for(let i = 100; i >= 1; --i){
+        //         if(i % 2 == 1){
+        //             console.log(i);
+        //         }
+        // }
+
+        //덧셈을 활용 또는 짝,홀수 구하는 반복문
+
+        // 팩토리얼
+        // 3! = 3 * 2 * 1 , 1 * 2 * 3
+        // i = 1
+        // i = 2
+        // i = 3
+       
+        // i = 1;
+        // i <= 3 
+        // i++
+
+        // let fac = 1;
+
+        // let count = Number(prompt("원하는 값을 입력하세요."));
+
+        // for(let i = 1; i<=count; i++){
+        //     // 1) 1 = 1 * 1;
+        //     // 2) 1 = 1 * 2;
+        //     // 3) 2 = 2 * 3; 
+        //     fac = fac * i;
+        //     console.log(fac);
+        // }
+
+        // console.log(count + "!의 값은 : " + fac);
+
+        //구구단
+        //2단 출력하는 반복문
+        // 2 * 1 = 2
+        // 2 * 2 = 4
+        // 2 * 3 = 6
+        // 2 * 4 = 8
+        // 2 * 5 = 10
+
+        // for(let i = 1; i <=9; i++){
+        //     console.log("2*" + i + "=" + (2*i)); //(2*i)괄호한이유 : 계산하는것을 우선순위로 두기위해
+        // }
+
+        // 1) 1~100까지의 숫자 중에서 홀수들의 합 구하기
+        
+        // for(let i = 1; i <=100; i++){
+        //     if(i % 2 == 1){
+        //         sum = sum + i;
+        //     }
+        // }
+        // console.log(sum);
+
+        // // 2) 입력 받은 수까지 합 구하기
+
+        // let num = Number(prompt("숫자를 입력하세요"));
+        // sum = 0;
+        // for(let i=0; i<num; i++){
+        //     sum +=i;
+        // }
+        // console.log(sum);
+
+        //이중 for문, 중첩 for문
+
+        // for(){
+        //     for(){
+
+        //     }
+        // }
+
+        //중첩 for문을 활용한 2~9단 출력하기
+
+        //2~9단까지 표현하기 위한 반복문
+        //2,3,4,5,6,7,8,9
+        // for(let i = 2; i<=9;i++){               
+
+        //     //2~9단까지 계산을 하기 위한 반복문
+        //     //1,2,3,4,5,6,7,8,9
+        //     for(let j=1; j<=9; j++){
+        //         console.log(i+"*"+"="+(i*j));
+        //         // 2(i=2고정) * 1~9(j 변환)
+        //         // 3(i=3고정) * 1~9(j 변환)
+        //     }
+        // }
+
+        //두개의 주사위의 합이 6이 되는 모든 경우 출력
+        // 1) 1 + 5
+        // 2) 2 + 4
+        // 3) 3 + 3
+        // 4) 4 + 2
+        // 5) 5 + 1
+        
+        //이중for문
+        // for(let i = 1; i <= 6; i++){     // A 주사위 2 3 1
+
+        //     for(let j = 1; j <= 6; j++){ // B 주사위 4 3 5
+        //         if(i+j==6){
+        //             console.log("두개의 주사위 합이 되는 경우 " + i + "," + j);
+        //         }
+        //     }
+        // }
+
+        //별찍기
+        
+        // * → 
+        // ** →
+        // *** →
+        // **** →
+        // ***** →
+
+
+        // \t 수평탭  \n 해
+        
+        // let star = '';
+
+        // for(let i=1; i<=5; i++){
+        //     for(let j=1; j<=i; j++){
+        //         star+="*";
+        //     }
+        //     star+="\n";
+        // }
+        
+        // console.log(star);
+
+
+        // *****
+        // ****
+        // ***
+        // **
+        // *
+
+        // let star = '';
+
+        // for(let i=5; i>=1; i--){
+        //     for(let j=1; j<=i; j++){
+        //         star+="*"
+        //     }
+        //     star+="\n";
+        // }
+        // console.log(star);
+
+        
+        // for(let i=1; i<=5; i++){
+        //     for(let j=5; j>=i; j--){
+        //         star+="*"
+        //     }
+        //     star+="\n";
+        // }
+
+        // *****
+        //  ****
+        //   ***
+        //    **
+        //     *
+
+        let star = '';
+
+        for(let i=1; i<=5; i++){
+
+            // j=1, i=1 1<1
+            // j=1, i=2 1<2
+            // j=2, i=2 2<2
+            for(let j=1; j<i; j++){
+                star+=" ";
+            }
+
+            // j=1~5
+            // j=1~4
+                for(let j=1; j<=6-i; j++){
+                    star+="*"
+            }
+            star+="\n"
+        }
+
+        console.log(star);
+
+
+
+        
+        
+
+       
+        
+        //while문
+        //do~while문
+        
+
+
+        // 2) 참조 데이터타입 (배열)
+        // 3) 참조 데이터타입 (배열) 
+
+        //배열
+        //let num = 1;
+        //let str = "string";
+
+        //let array = [1,"string",2,3]
+        //array[0] =1
+        //변수이름[n]
+        //array[3] = 3
+        //let array = []
+        //주소를 알면 데이터를 가져올수있음
+    </script>
+</body>
+</html>
